@@ -29,7 +29,7 @@ public class TicTacToe {
         
         /* MAIN LOOP */
 
-        while (!model.isGameover()) {
+        while (!model.isGameover()) { // not needed for gui
             
             view.viewModel();
             controller.controlModel();

@@ -98,6 +98,7 @@ public class TicTacToeModel {
         
         /* INSERT YOUR CODE HERE */
 
+        //check if square is empty and within limits
         if(isValidSquare(row, col) && !isSquareMarked(row, col)){
 
             if(isXTurn()){
@@ -192,7 +193,6 @@ public class TicTacToeModel {
 						colCount[i] += 1;
 					}
 				}
-				
 			}
 		}
         //return true if the list of marks are equal to the width
@@ -232,12 +232,12 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
-        boolean gridFull = true;
+        boolean gridFull = true;          //doesnt work if last move is a winning mark
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < width; j++) {
                 if(!isSquareMarked(i,j)){
                     gridFull = false;
-                }
+                }              
             }
         }
         if(gridFull == true){

@@ -18,7 +18,7 @@ public class TicTacToeView {
         
         /* INSERT YOUR CODE HERE */
         //needs 29 fields
-        System.out.print("\n\n" + "   "); // 2 blank lines with 2 spaces on next line
+        System.out.print("\n  "); // 2 blank lines with 2 spaces on next line
         for (int i = 0; i < model.getWidth(); i++){
             System.out.print(i);
         }
@@ -29,9 +29,12 @@ public class TicTacToeView {
             // Loop through columns
             for (int j = 0; j < model.getWidth(); j++) {
                 System.out.print(model.getMark(i,j)); // number of line with 1 space followed by grid
+                if(j == model.getWidth() - 1){
+                    System.out.print("\n");
+                }
             }
         } 
-        System.out.println("\n");
+        System.out.println("");
     }
 
     public void showNextMovePrompt() {
@@ -55,9 +58,7 @@ public class TicTacToeView {
         /* INSERT YOUR CODE HERE */
 
 
-        System.out.println("Invalid Input.");
-        System.out.print("Enter the row and column numbers, separated by a space: ");
-
+        System.out.println("Invalid Input. Please try again.");
     }
 
     public void showResult(String r) {

@@ -32,7 +32,7 @@ public class TicTacToeModel {
         
         X("X"), 
         O("O"), 
-        TIE("Tie"), 
+        TIE("TIE"), 
         NONE("none");
 
         private String message;
@@ -232,19 +232,15 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 
         /* INSERT YOUR CODE HERE */
-        boolean gridFull = true;          //doesnt work if last move is a winning mark
+        //doesnt work if last move is a winning mark
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < width; j++) {
                 if(!isSquareMarked(i,j)){
-                    gridFull = false;
+                    return false;
                 }              
             }
         }
-        if(gridFull == true){
-            return true;
-        }
-        return false;
-
+        return true;
     }
 
     public boolean isGameover() {

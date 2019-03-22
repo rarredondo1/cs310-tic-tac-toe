@@ -37,6 +37,10 @@ the program into its parts to be able to read it easily without being confused b
 
 
 
-**MVC parts**
+**MVC parts conclusion**
 
--- the parts 
+- When using the MVC model it teaches a since of direction for what parts of the code are handled by the program.
+ When looking at the _Model_ as a real world object, it can be prepared as a list of objects(functions) that can be used to carry
+ out in a certain way to preform an action. Then the _View_ can be seen as what the users sees and interacted with in order for the user
+ to understand and recieve the output of the operations. Finally the _Controller_ is the recipe for the functions and the viewing model.
+  Which will then be put together to make a seamless program that the end user will be able to comply with easily.
